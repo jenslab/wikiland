@@ -1,4 +1,4 @@
-<h1><a href="https://wiki-land.herokuapp.com/">wikiland</a></h1> social markdown wikis
+<div><h1><a href="https://wiki-land.herokuapp.com/">wikiland</a></h1> social markdown wikis</div>
 
 <h3>Use Case</h3>
 Build an app that lets users create their own wikis and share them publicly or privately with other collaborators.
