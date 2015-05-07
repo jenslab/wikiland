@@ -14,9 +14,14 @@
   <nav>
     <div class="logo"> wikiland </div>
     <span class="glyphicon glyphicon-leaf"></span>
+    <% if current_user %>
+    <%= link_to "sign out", destroy_user_session_path, method: :delete %>
+    <%= link_to "home", root_path %>
+    <span class="user"><%= current_user.user_name %></span>
+    <% else %>
     <%= link_to "sign in", new_user_session_path %>
     <%= link_to "about", welcome_about_path %>
-    <%= link_to "home", root_path %>
+    <% end %>
   </nav>
 </header>
 

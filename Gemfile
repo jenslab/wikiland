@@ -36,6 +36,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #My Gems
 gem 'bootstrap-sass'
 gem 'devise'
+gem 'figaro', '1.0'
 
 
 group :development, :test do
