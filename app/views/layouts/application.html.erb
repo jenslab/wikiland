@@ -14,8 +14,9 @@
   <nav>
     <div class="logo"> wikiland </div>
     <span class="glyphicon glyphicon-leaf"></span>
-    <a href="#"> sign in</a>
-    <a href="#"> about</a>
+    <%= link_to "sign in", new_user_session_path %>
+    <%= link_to "about", welcome_about_path %>
+    <%= link_to "home", root_path %>
   </nav>
 </header>
 

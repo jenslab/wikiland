@@ -11,6 +11,8 @@ end
 
 group :development do 
   gem 'sqlite3'
+  gem 'better_errors'
+  gem "letter_opener"
 end
 
 # Use SCSS for stylesheets
@@ -33,6 +35,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 #My Gems
 gem 'bootstrap-sass'
+gem 'devise'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
