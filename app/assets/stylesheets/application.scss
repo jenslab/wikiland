@@ -180,3 +180,77 @@ header {
   .about p{
     font-size: 24px;
   }
+
+/* Wiki index */
+
+.new-wiki {
+  border: 2px solid rgba(128, 128, 128, 0.4);
+  border-radius: 8px;
+  float: right;
+  margin-right: 40px;
+  margin-top: 40px;
+  padding: 4px;
+}
+
+  .new-wiki a:hover {
+    text-decoration: none;
+  }
+
+.search {
+  display: inline-block;
+  margin-top: 20%;
+  margin-left: 20%;
+}
+
+.wiki-container {
+  float: left;
+  padding: 8px;
+  margin-top: 2%;
+  height: 500px;
+}
+
+.preview-wikis-container{
+  border: 2px solid rgba(128, 128, 128, 0.1);
+  border-radius: 4px;
+  height: 120px;
+  width: 350px;
+  margin-top: 25px;
+}
+  .preview-wikis-nav a:hover{
+    text-decoration: none;
+  }
+
+  .btn-group{
+    float: right;
+  }
+
+    .glyphicon-cog{
+      color: rgb(41, 122, 204);
+    }
+
+  .preview-wikis{
+    height: 80px;
+    padding: 4px;
+  }
+
+/* New form - wiki */
+
+.new-form{
+
+  width: 480px;
+  height: 550px;
+  padding: 8px;
+  margin-top: 15px;
+  border-right: 2px solid rgba(128, 128, 128, 0.2);
+}
+
+/* Wishi#show */
+
+.wiki-show{
+  padding: 40px; 
+  width: 1000px;
+}
+
+  .wiki-show p {
+    font-size: 18px;
+  }

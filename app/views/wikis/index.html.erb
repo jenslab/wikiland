@@ -1,0 +1,27 @@
+  <div class="new-wiki">
+    <%= link_to " new wiki", new_wiki_path %>
+  </div>
+
+<div class="search">
+  <form class="navbar-form" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn-sm btn-default">go</button>
+      </form>
+</div>
+
+<div class="wiki-container">
+  <nav class="wiki-nav">
+    <ul class="nav nav-tabs">
+    <li role="presentation" class="active"><%= link_to "latest wikis" %></li>
+    <li role="presentation"><%= link_to "my wikis" %></li>
+    <li role="presentation"><%= link_to "private wikis" %></li>
+    </ul>
+  </nav>
+<h6>Preview</h6>
+<%= render @wikis %>
+
+</div>
+
+

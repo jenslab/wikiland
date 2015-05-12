@@ -1,0 +1,10 @@
+<div class="new-form">
+  <h3>Markdown</h3>
+<%= form_for [wiki] do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title, class: 'form-control' %><br/>
+<%= f.label :body %>
+<%= f.text_area :body, class: 'form-control', :rows => "15" %><br/>
+<%= f.submit "Save" %>
+<% end %>
+</div>
