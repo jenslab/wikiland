@@ -14,7 +14,7 @@
   <div class="preview-wikis">
     <h5><%= wiki.title %></h5>
     <p><%= time_ago_in_words(wiki.created_at)%> ago </p>
-    <%= wiki.body.truncate_words(15) %>
+    <%= wiki.body.truncate_words(10) %>
     <%= link_to "read more", wiki %>
   </div>
 
