@@ -1,3 +1,9 @@
+  <% if current_user.role == 'standard' %>
+  <div class="upgrade-message"> Want to create private wikis? Upgrade <%= link_to "here", new_charge_path %>, it's only US$15 per year!</div>
+  <% else %>
+  <div class="downgrade-message"> You are a premium member <%= link_to "change"%></div>
+  <% end %>
+
   <div class="new-wiki">
     <%= link_to " new wiki", new_wiki_path %>
   </div>

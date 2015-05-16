@@ -6,8 +6,7 @@
 <%= f.label :body %>
 <%= f.text_area :body, class: 'form-control', :rows => "15" %><br/>
 <%= f.label :private, class: 'checkbox' do %>
-<%= f.check_box :private %> Private wiki
 <% end %>
-<%= f.submit "Save" %>
+<%= f.submit "Save" %> <%= f.check_box :private %> Private wiki
 <% end %>
 </div>
