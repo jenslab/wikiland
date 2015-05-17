@@ -1,5 +1,5 @@
 <div class="container-form">
-<h2>edit <%= resource_name.to_s.humanize %></h2>
+<h2> edit your info. </h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
@@ -14,7 +14,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.label :change_password %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
   </div>
 

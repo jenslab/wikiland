@@ -23,6 +23,5 @@ end
 def premimum?
   role == 'premium'
 end
-
          
 end

@@ -17,7 +17,7 @@
     <% if current_user %>
     <%= link_to "sign out", destroy_user_session_path, method: :delete %>
     <%= link_to "home", root_path %>
-    <span class="user"><%= current_user.user_name %></span>
+    <%= link_to "#{current_user.user_name}", edit_user_registration_path, class: "user" %>
     <% else %>
     <%= link_to "sign in", new_user_session_path %>
     <%= link_to "about", welcome_about_path %>
