@@ -1,7 +1,9 @@
 class WikisController < ApplicationController
 
+before_action :authenticate_user!
+
   def index
-    @wikis = Wiki.all
+    @wikis = Wiki.public_wikis
   end
 
   def show
@@ -12,6 +14,7 @@ class WikisController < ApplicationController
 
   def new
     @wiki = Wiki.new
+    authorize @wiki
   end
 
   def create
@@ -54,7 +57,7 @@ class WikisController < ApplicationController
   private
 
   def wiki_params
-    params.require(:wiki).permit(:title, :body, :public)
+    params.require(:wiki).permit(:title, :body, :private)
   end
 
 end

@@ -8,5 +8,6 @@ get 'downgrade' => 'users#downgrade'
 
 resources :wikis
 resources :charges, only: [:new, :create]
+resources :users, only: [:index, :show]
 
 end

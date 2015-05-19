@@ -1,12 +1,20 @@
 <div class="new-form">
-  <h3>Markdown</h3>
+
+<h3>Markdown</h3>
+
 <%= form_for [wiki] do |f| %>
 <%= f.label :title %>
 <%= f.text_field :title, class: 'form-control' %><br/>
 <%= f.label :body %>
 <%= f.text_area :body, class: 'form-control', :rows => "15" %><br/>
-<%= f.label :private, class: 'checkbox' do %>
+
+<% if current_user.role == 'admin' || current_user.role == 'premium' %>
+  <%= f.label :private, class: 'checkbox' do %>
+  <%= f.check_box :private %> Private wiki
+  <% end %>
 <% end %>
-<%= f.submit "Save" %> <%= f.check_box :private %> Private wiki
+
+<%= f.submit "Save" %>
+
 <% end %>
 </div>
