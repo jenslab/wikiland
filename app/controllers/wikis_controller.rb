@@ -14,7 +14,6 @@ before_action :authenticate_user!
 
   def new
     @wiki = Wiki.new
-    authorize @wiki
   end
 
   def create
