@@ -18,7 +18,8 @@ before_action :authenticate_user!
 
   def create
     @wiki = current_user.wikis.build(wiki_params)
-
+    @wiki.private ||= false
+    
     if @wiki.save
       redirect_to wikis_path, notice: "Wiki was saved!"
     else

@@ -211,31 +211,54 @@ header {
 .wiki-container {
   padding: 28px;
   margin-top: 2%;
-  height: 500px;
 }
 
 .preview-wikis-container{
   border: 2px solid rgba(128, 128, 128, 0.1);
   border-radius: 4px;
-  height: 120px;
-  margin-top: 25px;
+  height: 150px;
+  margin: 0 30px 30px 30px;
+  padding-bottom: 0px;
 }
-  .preview-wikis-nav a:hover{
-    text-decoration: none;
+
+  #fixed-size {
+   width: 1150px;
+   margin: 0 auto;
+   height: 100%;
   }
 
   .btn-group{
     float: right;
+    margin: 5px;
   }
 
     .glyphicon-cog{
       color: rgb(41, 122, 204);
     }
 
-  .preview-wikis{
-    height: 80px;
-    padding: 4px;
+  #preview {
+    padding: 0 10px 0 10px;
+    float: left;
   }
+
+  #preview h4 {
+    margin:0;
+    padding: 0;
+  }
+
+  #previoew p {
+    margin: 0;
+    padding: 0;
+  }
+
+  #link {
+    float: right;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 120px;
+  }
+
 
 /* New form - wiki */
 
@@ -244,9 +267,8 @@ header {
   width: 480px;
   height: 550px;
   padding: 12px;
-  margin-top: 15px;
-  margin-left: 25px;
-  border-right: 2px solid rgba(128, 128, 128, 0.2);
+  margin: 0 auto;
+  
 }
 
 /* Wiki#show */
