@@ -221,10 +221,11 @@ header {
   padding-bottom: 0px;
 }
 
-  #fixed-size {
+  .fixed-size {
    width: 1150px;
    margin: 0 auto;
    height: 100%;
+
   }
 
   .btn-group{
@@ -236,22 +237,25 @@ header {
       color: rgb(41, 122, 204);
     }
 
-  #preview {
+  .preview {
     padding: 0 10px 0 10px;
     float: left;
+    position: relative;
+    overflow: hidden;
+    hide: 250px;
   }
 
-  #preview h4 {
+  .preview h4 {
     margin:0;
     padding: 0;
   }
 
-  #previoew p {
+  .previoew p {
     margin: 0;
     padding: 0;
   }
 
-  #link {
+  .link {
     float: right;
     margin: 0;
     padding: 0;
