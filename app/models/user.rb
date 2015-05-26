@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
 has_many :wikis, dependent: :destroy
+has_many :collaborators
+has_many :wikis, through: :collaborators 
 
 after_initialize :init
 
