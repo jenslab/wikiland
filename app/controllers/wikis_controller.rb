@@ -3,7 +3,7 @@ class WikisController < ApplicationController
 before_action :authenticate_user!
 
   def index
-    @wikis = Wiki.public_wikis
+    @wikis = policy_scope(Wiki)
   end
 
   def show
@@ -30,8 +30,8 @@ before_action :authenticate_user!
 
   def edit
     @wiki = Wiki.find(params[:id])
-    @collaborator = Collaborator.new
-    @collaborators = @wiki.collaborators
+    
+    @collaborator = @wiki.collaborators
     @users = User.all 
   end
 
@@ -60,7 +60,7 @@ before_action :authenticate_user!
   private
 
   def wiki_params
-    params.require(:wiki).permit(:title, :body, :private)
+    params.require(:wiki).permit(:title, :body, :private, :collab_users)
   end
 
 end

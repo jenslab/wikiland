@@ -1,2 +1,20 @@
 <%= render 'form', wiki: @wiki %>
-<%= render 'collaborator' %>
+
+<% if @wiki.private? %>
+<h3> add collaborators </h3>
+<table class = 'table'>
+  <% @users.each do |user| %>
+  <tr>
+    <td><%= user.user_name %></td>
+    <td>
+      <% if @collaborator.include? user %>
+      <%= link_to "Remove Collaborator", wiki_collaborator_path(@wiki, @wiki.collaborator_for(user)), method: :delete %>
+      <% else %>
+      <%= link_to "Add Collaborator", wiki_collaborators_path(@wiki, user_id: user.id), method: :post %>
+      <% end %>
+    </td>  
+  </tr>
+  <% end %>
+
+
+<% end %>

@@ -6,7 +6,10 @@ root to: 'welcome#index'
 get 'welcome/about'
 get 'downgrade' => 'users#downgrade'
 
-resources :wikis
+resources :wikis do
+  resources :collaborators, only: [:create, :destroy]
+end
+
 resources :charges, only: [:new, :create]
 resources :users, only: [:index, :show]
 

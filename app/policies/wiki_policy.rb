@@ -1,7 +1,6 @@
 class WikiPolicy < ApplicationPolicy
 
 def index?
-
 end
 
 def show?

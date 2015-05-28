@@ -5,8 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
 has_many :wikis, dependent: :destroy
+
 has_many :collaborators
-has_many :wikis, through: :collaborators 
+has_many :collab_wikis, through: :collaborators, :source => :wiki
 
 after_initialize :init
 
@@ -25,5 +26,6 @@ end
 def premimum?
   role == 'premium'
 end
+
          
 end

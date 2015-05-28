@@ -1,3 +1,7 @@
-<% if wiki.private? %>
-<h3> add collaborators </h3>
-<%end%>
+<%= form_for [wiki, collaborator] do |f| %>
+
+<%= f.label :collab_username %>
+<%= f.check_box :wiki_id%>
+<%= f.submit "Add" %>
+<% end %>
+
