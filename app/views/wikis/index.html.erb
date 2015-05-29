@@ -12,10 +12,17 @@
 <div class="wiki-container">
   <nav class="wiki-nav">
     <ul class="nav nav-tabs">
-    <li role="presentation" class="active"><%= link_to "latest wikis" %></li>
-    <li role="presentation"><%= link_to "my public wikis", users_path%></li>
+
+    <% if current_user.role == 'standard' %>  
+      <li role="presentation" class="active"><%= link_to "latest wikis" %></li>
+      <li role="presentation"><%= link_to "my public wikis", users_path%></li>
+      <li role="presentation"><%= link_to "collab wikis", user_path(current_user)%></li>
+    <% end %>
+
     <% if current_user.role == 'premium' || current_user.role == 'admin' %>
-    <li role="presentation"><%= link_to "my private wikis", user_path(current_user) %></li>
+      <li role="presentation" class="active"><%= link_to "latest wikis" %></li>
+      <li role="presentation"><%= link_to "my public wikis", users_path%></li>
+      <li role="presentation"><%= link_to "my private wikis", user_path(current_user) %></li>
     <% end %>
     </ul>
   </nav>

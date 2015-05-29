@@ -7,7 +7,7 @@
   <tr>
     <td><%= user.user_name %></td>
     <td>
-      <% if @collaborator.include? user %>
+      <% if @collaborators.pluck(:user_id).include? user.id %>
       <%= link_to "Remove Collaborator", wiki_collaborator_path(@wiki, @wiki.collaborator_for(user)), method: :delete %>
       <% else %>
       <%= link_to "Add Collaborator", wiki_collaborators_path(@wiki, user_id: user.id), method: :post %>

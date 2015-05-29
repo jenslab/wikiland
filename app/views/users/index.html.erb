@@ -1,6 +1,7 @@
 <% if current_user.role == 'standard' %>
 <div class="wiki-container">
-<h4> my wikis </h4>
+<h4> my wikis </h4><br / >
+  <div class="back"> <%= link_to "back", :back %></div><br / >
 <%= render @wikis %>
 </div>
 
@@ -9,10 +10,11 @@
 <div class="wiki-container">
   <nav class="wiki-nav">
     <ul class="nav nav-tabs">
-    <li role="presentation" class="active"><%= link_to "my wikis" %></li>
+    <li role="presentation" class="active"><%= link_to "my public wikis" %></li>
     <li role="presentation"><%= link_to "private wikis", user_path(current_user) %></li>
     </ul>
   </nav>
+  <div class="back"> <%= link_to "back", :back %></div><br / >
 <h6>Preview</h6>
 <%= render @wikis %>
 </div>

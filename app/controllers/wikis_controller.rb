@@ -30,8 +30,7 @@ before_action :authenticate_user!
 
   def edit
     @wiki = Wiki.find(params[:id])
-    
-    @collaborator = @wiki.collaborators
+    @collaborators = @wiki.collaborators
     @users = User.all 
   end
 

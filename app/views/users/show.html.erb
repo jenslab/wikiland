@@ -1,4 +1,16 @@
 <div class="wiki-container">
-  <h4>my private wikis</h4>
-<%= render @wikis %>
+<% if current_user.role == 'premium'%>
+      <h4 class="private_wikis">my private wikis</h4><br />
+      <div class="clear"></div>
+      <div class="back"> <%= link_to "back", :back %></div><br / >
+      <%= render @wikis %>
+      
+  <% else %>
+      <h4>my collab wikis</h4>
+      <p>You are a collaborator in <%= pluralize(current_user.collaborators.count, 'wiki') %></p>
+      <% @collaborators.each do |collab|%>
+      <%= link_to "#{collab.wiki.title}", edit_wiki_path(@wiki)%><br />
+      <%= collab.wiki.body %><br /><br / >
+      <% end %>
+    <% end %>
 </div>

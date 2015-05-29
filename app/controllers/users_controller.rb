@@ -6,6 +6,11 @@ class UsersController < ApplicationController
 
   def show
     @wikis = current_user.wikis.private_wikis 
+  
+    @user = User.find(params[:id])
+    @wiki = Wiki.find(params[:id])
+    @collaborators = @user.collaborators
+   
   end
 
   def downgrade
