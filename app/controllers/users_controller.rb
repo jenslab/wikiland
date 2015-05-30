@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   
     @user = User.find(params[:id])
     @wiki = Wiki.find(params[:id])
+    @collab_wiki = @wiki
     @collaborators = @user.collaborators
    
   end
